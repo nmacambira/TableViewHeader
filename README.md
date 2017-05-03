@@ -7,5 +7,5 @@ Just a simple tableview with a custom header!
 
 
 ## Info
-- Xcode 8.3.2
+
 - Swift 3.1
