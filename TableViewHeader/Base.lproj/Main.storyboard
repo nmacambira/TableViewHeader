@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mo7-aI-XMo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mo7-aI-XMo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,7 +26,67 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="405-SY-lH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016.8" y="134.48275862068968"/>
+            <point key="canvasLocation" x="1852" y="-82"/>
+        </scene>
+        <!--ExpandableCells-->
+        <scene sceneID="PUw-X6-2g5">
+            <objects>
+                <tableViewController id="J50-05-Huv" customClass="ExpandableCellsTableViewController" customModule="TableViewHeader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="PEr-gv-tYb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="J50-05-Huv" id="AgA-Gc-9Nd"/>
+                            <outlet property="delegate" destination="J50-05-Huv" id="dsF-qn-Imb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="ExpandableCells" id="aPZ-7Z-UOC"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NoF-vn-Hn3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1876" y="582"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="pRs-KM-4if">
+            <objects>
+                <viewController id="YiV-Wv-Dl5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b6h-vE-bWJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="pyA-gD-9GH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jKZ-7C-yRn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIC-X6-Y7D">
+                                <rect key="frame" x="100" y="88" width="174" height="30"/>
+                                <state key="normal" title="Simple TableView Header"/>
+                                <connections>
+                                    <segue destination="sNK-bp-Obr" kind="show" id="1Au-sA-6eF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v16-vq-7IJ">
+                                <rect key="frame" x="47" y="150" width="281" height="30"/>
+                                <state key="normal" title="TableView Header With Expandable Cells"/>
+                                <connections>
+                                    <segue destination="J50-05-Huv" kind="show" id="FqS-nR-q55"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fIC-X6-Y7D" firstAttribute="top" secondItem="b6h-vE-bWJ" secondAttribute="bottom" constant="24" id="EiU-Sg-c8r"/>
+                            <constraint firstItem="fIC-X6-Y7D" firstAttribute="centerX" secondItem="jKZ-7C-yRn" secondAttribute="centerX" id="KKq-jl-QMx"/>
+                            <constraint firstItem="v16-vq-7IJ" firstAttribute="centerX" secondItem="jKZ-7C-yRn" secondAttribute="centerX" id="MBb-HD-KLi"/>
+                            <constraint firstItem="v16-vq-7IJ" firstAttribute="top" secondItem="fIC-X6-Y7D" secondAttribute="bottom" constant="32" id="toG-cu-gkR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Menu" id="A4y-CK-vob"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="74U-np-aBo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eOO-bM-3mb">
@@ -39,7 +99,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="sNK-bp-Obr" kind="relationship" relationship="rootViewController" id="ywB-NK-oJA"/>
+                        <segue destination="YiV-Wv-Dl5" kind="relationship" relationship="rootViewController" id="yko-FL-NIy"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0KG-ki-hu4" userLabel="First Responder" sceneMemberID="firstResponder"/>

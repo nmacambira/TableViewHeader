@@ -11,16 +11,13 @@ import UIKit
 class TableViewHeader: UITableViewHeaderFooterView {
     
     @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var usernameLabel: UILabel!
-    
+    @IBOutlet weak var button: HeaderButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2;
-        self.imageView.clipsToBounds = true
-    
+        self.imageView.layer.masksToBounds = true
     }
-
 }

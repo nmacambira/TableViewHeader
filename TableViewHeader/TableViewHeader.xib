@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,23 +35,29 @@
                         <constraint firstAttribute="height" constant="1" id="RnB-6X-gHa"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCi-m4-ZNR" customClass="HeaderButton" customModule="TableViewHeader" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Wml-I4-oNA" secondAttribute="bottom" id="23t-H8-bXF"/>
-                <constraint firstAttribute="bottom" secondItem="mpB-EU-l7d" secondAttribute="bottom" constant="20" id="6o0-Kf-3xe"/>
                 <constraint firstAttribute="trailing" secondItem="Wml-I4-oNA" secondAttribute="trailing" id="ATv-bF-Qhv"/>
+                <constraint firstItem="VCi-m4-ZNR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="E45-cv-yto"/>
                 <constraint firstItem="Wml-I4-oNA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Fj3-uC-tp2"/>
                 <constraint firstAttribute="bottom" secondItem="dM3-O5-DWl" secondAttribute="bottom" constant="10" id="HEF-gY-ssw"/>
-                <constraint firstItem="dM3-O5-DWl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="NB4-pp-eyf"/>
+                <constraint firstItem="dM3-O5-DWl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="IWz-NN-MoY"/>
+                <constraint firstItem="VCi-m4-ZNR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Q2c-w0-aed"/>
                 <constraint firstItem="dM3-O5-DWl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Soo-JM-Fuw"/>
                 <constraint firstItem="mpB-EU-l7d" firstAttribute="leading" secondItem="dM3-O5-DWl" secondAttribute="trailing" constant="8" id="T7o-K2-DbA"/>
-                <constraint firstItem="mpB-EU-l7d" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="19" id="hD6-T6-lad"/>
+                <constraint firstItem="mpB-EU-l7d" firstAttribute="centerY" secondItem="dM3-O5-DWl" secondAttribute="centerY" id="a5F-fU-X6m"/>
+                <constraint firstAttribute="bottom" secondItem="VCi-m4-ZNR" secondAttribute="bottom" id="gq0-RR-bk0"/>
+                <constraint firstAttribute="trailing" secondItem="VCi-m4-ZNR" secondAttribute="trailing" id="n0s-XX-bW3"/>
                 <constraint firstAttribute="trailing" secondItem="mpB-EU-l7d" secondAttribute="trailing" constant="16" id="r71-0f-EMg"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="button" destination="VCi-m4-ZNR" id="u95-mF-baR"/>
                 <outlet property="imageView" destination="dM3-O5-DWl" id="RMf-oa-9Ip"/>
                 <outlet property="usernameLabel" destination="mpB-EU-l7d" id="Hen-4m-pPg"/>
             </connections>

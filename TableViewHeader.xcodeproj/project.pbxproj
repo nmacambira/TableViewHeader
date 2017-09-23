@@ -18,6 +18,8 @@
 		835274BD1EA24C0D0024D6BE /* User.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 835274BC1EA24C0D0024D6BE /* User.jpg */; };
 		835274BF1EA24C260024D6BE /* Image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 835274BE1EA24C260024D6BE /* Image.jpg */; };
 		835274CA1EA2637C0024D6BE /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 835274C81EA2637C0024D6BE /* TableViewCell.xib */; };
+		8380CDE01F76838400F1114E /* ExpandableCellsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8380CDDF1F76838400F1114E /* ExpandableCellsTableViewController.swift */; };
+		8380CDE21F7689CA00F1114E /* HeaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8380CDE11F7689CA00F1114E /* HeaderButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		835274BC1EA24C0D0024D6BE /* User.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = User.jpg; sourceTree = "<group>"; };
 		835274BE1EA24C260024D6BE /* Image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Image.jpg; sourceTree = "<group>"; };
 		835274C81EA2637C0024D6BE /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		8380CDDF1F76838400F1114E /* ExpandableCellsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableCellsTableViewController.swift; sourceTree = "<group>"; };
+		8380CDE11F7689CA00F1114E /* HeaderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 				8352749A1EA248410024D6BE /* AppDelegate.swift */,
 				8352749E1EA248410024D6BE /* Main.storyboard */,
 				835274AF1EA248C00024D6BE /* TableViewController.swift */,
+				8380CDDF1F76838400F1114E /* ExpandableCellsTableViewController.swift */,
 				835274C21EA2573C0024D6BE /* Layout */,
 				835274A41EA248410024D6BE /* Assets.xcassets */,
 				835274A61EA248410024D6BE /* LaunchScreen.storyboard */,
@@ -108,6 +113,7 @@
 		835274C41EA25AAF0024D6BE /* header */ = {
 			isa = PBXGroup;
 			children = (
+				8380CDE11F7689CA00F1114E /* HeaderButton.swift */,
 				835274B71EA249BA0024D6BE /* TableViewHeader.swift */,
 				835274B91EA249E00024D6BE /* TableViewHeader.xib */,
 			);
@@ -190,9 +196,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8380CDE01F76838400F1114E /* ExpandableCellsTableViewController.swift in Sources */,
 				835274B51EA2490B0024D6BE /* TableViewCell.swift in Sources */,
 				835274B81EA249BA0024D6BE /* TableViewHeader.swift in Sources */,
 				8352749B1EA248410024D6BE /* AppDelegate.swift in Sources */,
+				8380CDE21F7689CA00F1114E /* HeaderButton.swift in Sources */,
 				835274B11EA248C00024D6BE /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
