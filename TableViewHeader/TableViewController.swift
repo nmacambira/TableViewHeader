@@ -14,12 +14,14 @@ final class TableViewController: UITableViewController {
         super.viewDidLoad()
         
         let feedHeader = UINib(nibName: "TableViewHeader", bundle: nil)
-        self.tableView.register(feedHeader, forHeaderFooterViewReuseIdentifier: "header")
+        tableView.register(feedHeader, forHeaderFooterViewReuseIdentifier: "header")
         
         let feedNib = UINib(nibName: "TableViewCell", bundle: nil)
-        self.tableView.register(feedNib, forCellReuseIdentifier: "cell")
+        tableView.register(feedNib, forCellReuseIdentifier: "cell")
         
-        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
+        tableView.estimatedRowHeight = 400.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
 
     // MARK: - Table view data source
@@ -49,9 +51,5 @@ final class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
-    }
-    
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
     }
 }

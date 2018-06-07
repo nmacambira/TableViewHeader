@@ -9,4 +9,4 @@ Just a simple tableview with a custom header using xib and a tableview header wi
 
 ## Info
 
-- Swift 3.1
+- Swift 4.0

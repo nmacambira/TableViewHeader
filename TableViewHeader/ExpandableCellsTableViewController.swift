@@ -66,7 +66,7 @@ final class ExpandableCellsTableViewController: UITableViewController {
         return UITableViewAutomaticDimension
     }
     
-    func headerTapped(_ sender: HeaderButton) {
+    @objc func headerTapped(_ sender: HeaderButton) {
         let section = sender.section
         //print("Header section:", section)
         let lastSelectedSection = selectedSection
